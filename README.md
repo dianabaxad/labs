@@ -16,3 +16,22 @@
 Для решения используется метод подбора result = (1 + 2) * 3 итоговая функция: def res(): str = "1 * (2+3) * 4 + 5 = " res = 1 * (2+3) * 4 + 5 print(str, res) return ""
 
 
+# Задание 3:
+Условие: Есть строка с перечислением фильмов: 'Терминатор, Пятый элемент, Аватар, Чужие, Назад в будущее'
+Выведите на консоль с помощью индексации строки, последовательно:
+1. первый фильм
+2. последни1
+3. второй
+4. второй с конца
+# Решение
+Для облегчения выполнения задания определим индексы запятых comma1 = my_favorite_movies.index(',') comma2 = my_favorite_movies.index(',', comma1 + 1) comma3 = my_favorite_movies.index(',', comma2 + 1) comma4 = my_favorite_movies.index(',', comma3 + 1) далее с помощью срезов найдем нужные нам фильмы def movies(): firstMovie = my_favorite_movies[:comma1] lastMovie = my_favorite_movies[comma4+2:] secondMovie = my_favorite_movies[comma1+2:comma2] secondLastMovie = my_favorite_movies[comma3+2:comma4] print("Первый фильм - ", firstMovie) print("Последний фильм - ", lastMovie) print("Второй фильм - ", secondMovie) print("Второй с конца фильм -" , secondLastMovie) return "" прибавление 2 к некоторым запятым обусловлено пропуском той самой запятой и пробелом после нее
+
+
+# Задание 4:
+Условие: Нужно создать список семьи в формате ИМЯ, РОСТ, после чего
+1. Вывести на консоль рост отца в формате Рост отца - ХХ см
+2. Вывести на консоль общий рост семьи как сумму ростов всех членов
+# Решение
+Создадим список списков: my_family_height = [ # ['имя', рост], ['Брат', 160], ['Мать', 165], ['Отец', 181], ['Бабушка', 161], ['Дедушка', 170], ] для вывода роста отца из списка используем индекс отца в списке def getHightFather(): return my_family_height[2][1] Чтобы вывести общий рост семьи, пройдемся по списку с помощью цикла for и суммируется рост каждого члена семьи def totalHight(): hight = 0 for person in my_family_height: hight += person[1] return hight
+
+
