@@ -31,4 +31,4 @@ for city1 in sites:
     for city2 in sites:
         if (city1 != city2):
             distance = calculateDistance(city1, city2)
-            distances[city1][city2] = distance
+            distances[city1][city2] = round(distance)
